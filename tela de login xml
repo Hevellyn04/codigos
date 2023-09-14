@@ -1,0 +1,74 @@
+<!-- activity_login.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#000000"
+    android:padding="16dp"
+    tools:context=".MainActivity"
+    >
+
+   
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_margin="50dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo"/>
+
+    <EditText
+        android:id="@+id/editTextUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nome de usuário"
+        android:textColorHint="#FFFFFF"
+        android:layout_marginBottom="24dp"
+        android:textColor="@color/white"
+        />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Senha"
+        android:textColorHint="#FFFFFF"
+        android:inputType="textPassword"
+        android:layout_marginBottom="24dp"
+        android:textColor="@color/white"/>
+
+    <!-- Botão de login -->
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Entrar"
+        android:textColor="#FFFFFF"
+
+        />
+
+    <!-- Texto "Não tem uma conta?" -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Não tem uma conta?"
+        android:layout_marginTop="16dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+    <!-- Botão de cadastro -->
+    <Button
+        android:id="@+id/buttonCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cadastre-se"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="8dp"
+         />
+</LinearLayout>
