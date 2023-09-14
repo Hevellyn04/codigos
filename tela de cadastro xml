@@ -1,0 +1,94 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#000000"
+    android:padding="16dp"
+    tools:context=".actvitycadastro">
+
+
+
+
+    <!-- Logo ou imagem de cabeçalho -->
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/logo"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Campo de nome -->
+    <EditText
+        android:id="@+id/editTextNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nome"
+        android:textColorHint="#FFFFFF"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/white"/>
+
+    <!-- Campo de email -->
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:textColorHint="#FFFFFF"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/white"/>
+
+    <!-- Campo de CPF -->
+    <EditText
+        android:id="@+id/editTextCpf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="CPF"
+        android:textColorHint="#FFFFFF"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/white"/>
+
+    <!-- Campo de endereço -->
+    <EditText
+        android:id="@+id/editTextEndereco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Endereço"
+        android:textColorHint="#FFFFFF"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/white"/>
+
+    <!-- Campo de senha -->
+    <EditText
+        android:id="@+id/editTextSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Senha"
+        android:textColorHint="#FFFFFF"
+        android:inputType="textPassword"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/white"/>
+
+    <!-- Campo de confirmação de senha -->
+    <EditText
+        android:id="@+id/editTextConfirmaSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Confirme a Senha"
+        android:textColorHint="#FFFFFF"
+        android:inputType="textPassword"
+        android:layout_marginBottom="24dp"
+        android:textColor="@color/white"/>
+
+    <!-- Botão de cadastro -->
+    <Button
+        android:id="@+id/buttonCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cadastrar"
+        android:layout_marginTop="16dp" />
+</LinearLayout>
