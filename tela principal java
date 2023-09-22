@@ -1,0 +1,36 @@
+package com.exemple.drinksexpress;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
+
+
+public class activityprincipal extends Activity {
+
+    private ImageButton bntBack;
+
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.telaprincipal);
+
+        bntBack = findViewById(R.id.btnBack);
+
+        bntBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Redirecione para a tela MainActivity
+                Intent intent = new Intent(activityprincipal.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
+    }
+}
