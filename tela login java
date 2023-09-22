@@ -1,10 +1,13 @@
 package com.exemple.drinksexpress;
+
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
+
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,48 +22,30 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-     
+        // Inicialize os elementos do layout com base em seus IDs
         editTextUsername = findViewById(R.id.editTextUsername);
         editTextPassword = findViewById(R.id.editTextPassword);
         buttonLogin = findViewById(R.id.buttonLogin);
         buttonCadastro = findViewById(R.id.buttonCadastro);
 
-        
+        // Defina um ouvinte de clique para o botão de login
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-              
-                String username = editTextUsername.getText().toString();
-                String password = editTextPassword.getText().toString();
-
-               
-                if (username.isEmpty() || password.isEmpty()) {
-                    Toast.makeText(MainActivity.this, "Preencha todos os campos", Toast.LENGTH_SHORT).show();
-                } else if (username.equals("usuario_correto") && password.equals("senha_correta")) {
-                    
-
-                    
-                    Toast.makeText(MainActivity.this, "Login bem-sucedido", Toast.LENGTH_SHORT).show();
-                } else {
-                    
-                    Toast.makeText(MainActivity.this, "Nome de usuário ou senha incorretos", Toast.LENGTH_SHORT).show();
-                }
+                // Se o botão "Entrar" for clicado, inicie a atividade principal
+                Intent intent = new Intent(MainActivity.this, activityprincipal.class);
+                startActivity(intent);
             }
         });
 
-
-       
+        // Defina um ouvinte de clique para o botão de cadastro
         buttonCadastro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                
+                // Se o botão "Cadastro" for clicado, inicie a atividade de cadastro
                 Intent intent = new Intent(MainActivity.this, actvitycadastro.class);
                 startActivity(intent);
             }
         });
-    }
-
-    private boolean isValidUser(String username, String password) {
-        return true;
     }
 }
